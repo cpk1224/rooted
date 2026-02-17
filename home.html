@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooted | Strategic Design & Execution for Climate</title>
+    
+    <link rel="icon" type="image/png" href="icon.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'IBM Plex Sans', sans-serif; background-color: #EBEBE5; color: #1A1C1E; scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'IBM Plex Serif', serif; }
+        .text-balanced { text-wrap: balance; }
+        .bg-earth-light { background-color: #F1F1ED; }
+        .border-subtle { border-color: rgba(0,0,0,0.1); }
+        
+        #inquiryModal {
+            display: none;
+            transition: opacity 0.3s ease;
+        }
+        #inquiryModal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <nav class="flex justify-between items-center px-10 py-10 max-w-7xl mx-auto">
+        <div class="flex items-center space-x-5">
+            <img src="icon.png" alt="Rooted Icon" class="w-12 h-12 object-contain">
+            <div class="flex flex-col justify-center">
+                <span class="text-2xl font-bold tracking-tighter uppercase leading-none serif-font">Rooted</span>
+                <span class="text-[9px] uppercase tracking-[0.3em] font-semibold opacity-60 mt-1.5">Strategic Design & Execution</span>
+            </div>
+        </div>
+        
+        <div class="hidden md:flex space-x-12 text-[10px] font-bold uppercase tracking-[0.25em] opacity-60">
+            <a href="#about" class="hover:opacity-100 transition">About</a>
+            <a href="#capabilities" class="hover:opacity-100 transition">Capabilities</a>
+            <a href="#engagement" class="hover:opacity-100 transition">Engagement</a>
+            <button onclick="toggleModal()" class="text-emerald-900 font-bold hover:opacity-100 transition border-b border-emerald-900/40">Inquire</button>
+        </div>
+    </nav>  
+
+    <header class="px-10 py-24 md:py-40 max-w-7xl mx-auto fade-in">
+        <div class="max-w-5xl">
+            <span class="text-[10px] font-sans uppercase tracking-[0.4em] mb-8 block font-bold text-emerald-900/70">A Strategic Design Partner</span>
+            <h1 class="text-6xl md:text-8xl font-light leading-[1.05] mb-12 text-balanced tracking-tight">
+                Building the products <br><span class="italic font-normal opacity-50 text-slate-500">of the transition.</span>
+            </h1>
+            <p class="text-2xl md:text-3xl font-light opacity-80 max-w-3xl mb-16 leading-relaxed">
+                We pair a decade of high-growth product expertise with deep climate literacy to transform technical complexity into world-class digital systems. 
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-8">
+                <button onclick="toggleModal()" class="font-sans bg-slate-900 text-white px-12 py-6 text-[11px] font-bold uppercase tracking-widest hover:bg-emerald-950 transition text-center shadow-lg">Start an Inquiry</button>
+                <a href="#about" class="font-sans border border-black/20 px-12 py-6 text-[11px] font-bold uppercase tracking-widest hover:bg-black/5 transition text-center">Our Philosophy</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-32 px-10 bg-earth-light border-y border-subtle">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-4">
+                    <h2 class="text-xs font-sans uppercase tracking-[0.4em] font-bold text-emerald-900 mb-6 italic">About Rooted</h2>
+                    <div class="space-y-6 font-sans">
+                        <div class="pt-4 border-t border-black/10">
+                            <span class="text-[10px] font-bold uppercase tracking-widest block mb-2 opacity-50">Pedigree</span>
+                            <p class="text-xs font-semibold leading-relaxed">
+                                Terra.do Climate Fellow<br>
+                                My Climate Journey (MCJ) Member<br>
+                                10+ Years Product Design
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-8">
+                    <h3 class="text-4xl font-light leading-tight mb-10 tracking-tight text-balanced">
+                        Bridging the gap between <span class="italic">complex science</span> and <span class="italic">intuitive software.</span>
+                    </h3>
+                    <div class="space-y-8 text-lg font-light opacity-80 leading-relaxed">
+                        <p>
+                            Rooted was established to solve a specific friction point in the transition: the Science-Design Divide. While groundbreaking climate technology is scaling rapidly, the interfaces used to manage that technology often lack the rigor of world-class product design.
+                        </p>
+                        <p>
+                            Our practice is built on over a decade of high-growth product experience. We pair this pedigree with deep domain expertise gained through the <strong>Terra.do Climate Fellowship</strong> and active membership within the <strong>My Climate Journey (MCJ)</strong> network.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="py-32 px-10">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-[10px] font-sans uppercase tracking-[0.4em] mb-20 font-bold opacity-50 italic">Core Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold">Strategic Design</h3>
+                    <p class="font-sans opacity-70 text-sm leading-relaxed text-balanced">Helping early-stage founders find "Product-Impact Fit" through systems mapping and strategic roadmapping.</p>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold">Complex UX/UI</h3>
+                    <p class="font-sans opacity-70 text-sm leading-relaxed text-balanced">Interfaces designed for complexity. We specialize in humanizing technical environmental metrics.</p>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold">Product Leadership</h3>
+                    <p class="font-sans opacity-70 text-sm leading-relaxed text-balanced">We provide "ready-to-build" systems and fractional leadership that empower your team to scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="engagement" class="py-32 px-10 max-w-7xl mx-auto border-t border-black/10">
+        <div class="grid md:grid-cols-2 gap-24 items-center">
+            <div class="space-y-10">
+                <h2 class="text-4xl md:text-5xl font-light leading-snug tracking-tight text-balanced">Strategy focused. <br>Execution ready.</h2>
+                <p class="text-lg opacity-70 leading-relaxed font-sans">
+                    Rooted provides the senior focus of a dedicated design partner. For specialized needs, we activate a vetted network of specialists—offering you a single point of strategic contact.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 border-t border-black/10 font-sans">
+                    <div class="space-y-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-900">Operational Excellence</span>
+                        <ul class="text-sm font-medium space-y-2">
+                            <li>• Product Management</li>
+                            <li>• Full-Stack Engineering</li>
+                            <li>• Growth Marketing</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-900">The Model</span>
+                        <p class="text-xs opacity-60 leading-relaxed italic">Direct partner-level attention for every engagement, backed by specialized execution on demand.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 text-white p-12 md:p-16 aspect-square flex flex-col justify-between relative overflow-hidden shadow-2xl">
+                <div class="text-[10px] font-sans uppercase tracking-[0.4em] opacity-40 font-bold italic">Scale-Ready Ecosystem</div>
+                <div class="z-10">
+                    <div class="text-6xl font-light mb-4 tracking-tighter italic">Bench</div>
+                    <p class="text-sm font-sans opacity-70 leading-relaxed max-w-xs">
+                        Activating senior <strong>Product Managers</strong>, engineers, and marketers specifically vetted for the climate-tech sector.
+                    </p>
+                </div>
+                <div class="absolute bottom-0 right-0 w-full h-full opacity-10 pointer-events-none">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="white"/></pattern></defs>
+                        <rect width="100%" height="100%" fill="url(#dots)" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-950 text-white py-40 px-10 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-light mb-10 tracking-tight">Let’s build.</h2>
+            <p class="opacity-50 mb-16 font-sans text-xl font-light max-w-xl mx-auto text-balanced">Currently accepting new partnerships for the 2026 calendar year.</p>
+            <button onclick="toggleModal()" class="font-sans bg-[#EBEBE5] text-slate-900 px-16 py-7 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-white transition shadow-lg">Contact Rooted</button>
+        </div>
+    </section>
+
+    <footer class="py-24 px-10 text-center text-[9px] font-sans font-bold opacity-40 uppercase tracking-[0.5em]">
+        Rooted — Strategic Design & Execution <br>
+        Austin, TX &middot; Global &middot; &copy; 2026
+    </footer>
+
+    <div id="inquiryModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm items-center justify-center p-4">
+        <div class="bg-[#F1F1ED] w-full max-w-2xl max-h-[90vh] overflow-y-auto relative shadow-2xl p-8 md:p-12">
+            <button onclick="toggleModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <div class="mb-12">
+                <h2 class="text-xs font-sans uppercase tracking-[0.4em] font-bold text-emerald-900 mb-4 italic">Project Inquiry</h2>
+                <h3 class="text-3xl font-light tracking-tight">Tell us about your mission.</h3>
+            </div>
+            
+            <form class="grid grid-cols-1 gap-8 font-sans">
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Organization Name</label>
+                    <input type="text" class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition">
+                </div>
+                <div class="space-y-4">
+                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Current Stage</label>
+                    <div class="flex flex-wrap gap-4">
+                        <label class="flex items-center space-x-2 text-sm cursor-pointer"><input type="radio" name="stage" class="accent-emerald-900"> <span>Pre-Seed / Seed</span></label>
+                        <label class="flex items-center space-x-2 text-sm cursor-pointer"><input type="radio" name="stage" class="accent-emerald-900"> <span>Series A+</span></label>
+                        <label class="flex items-center space-x-2 text-sm cursor-pointer"><input type="radio" name="stage" class="accent-emerald-900"> <span>Nonprofit / NGO</span></label>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">The Climate Challenge</label>
+                    <textarea rows="3" placeholder="Describe the environmental problem." class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition placeholder:text-black/30 text-sm"></textarea>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Scope of Interest</label>
+                    <select class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition appearance-none text-sm">
+                        <option>Strategic Definition & Discovery</option>
+                        <option>Full Lifecycle Design (UX/UI)</option>
+                        <option>Fractional Product Leadership</option>
+                        <option>End-to-End Execution (Design + PM + Eng)</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
+                    <button type="submit" class="w-full bg-slate-900 text-white py-6 text-[11px] font-bold uppercase tracking-widest hover:bg-emerald-950 transition">
+                        Submit Inquiry
+                    </button>
+                    <p class="mt-4 text-[9px] opacity-40 uppercase tracking-[0.3em] text-center content-center">Direct response within 48 hours</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('inquiryModal');
+            if (modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto'; 
+            } else {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('inquiryModal');
+            if (event.target == modal) {
+                toggleModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
