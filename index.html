@@ -193,8 +193,6 @@
 
         <form action="https://formspree.io/f/mkovvlrj" method="POST" class="grid grid-cols-1 gap-8 font-sans">
     
-    <input type="hidden" name="_next" value="https://rootedstrategy.co/success.html">
-    
     <input type="text" name="_gotcha" style="display:none">
 
     <div class="space-y-2">
@@ -204,13 +202,20 @@
 
     <div class="space-y-2">
         <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Area of Interest</label>
-        <select name="service" required class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition appearance-none cursor-pointer">
-            <option value="" disabled selected>Select a service...</option>
-            <option value="Product Strategy">Product Strategy & Design</option>
-            <option value="Engineering Execution">Engineering Execution</option>
-            <option value="Climate Roadmap">Climate Literacy Roadmap</option>
-            <option value="Full Partnership">Full Strategic Partnership</option>
-        </select>
+        <div class="relative">
+            <select name="service" required class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition appearance-none cursor-pointer pr-8">
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Product Strategy">Product Strategy & Design</option>
+                <option value="Engineering Execution">Engineering Execution</option>
+                <option value="Climate Roadmap">Climate Literacy Roadmap</option>
+                <option value="Full Partnership">Full Strategic Partnership</option>
+            </select>
+            <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none opacity-40">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </div>
+        </div>
     </div>
 
     <div class="space-y-2">
