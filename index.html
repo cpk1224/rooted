@@ -181,51 +181,41 @@
     </footer>
 
     <div id="inquiryModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm items-center justify-center p-4">
-        <div class="bg-[#F1F1ED] w-full max-w-2xl max-h-[90vh] overflow-y-auto relative shadow-2xl p-8 md:p-12">
-            <button onclick="toggleModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-
-            <div class="mb-12">
-                <h2 class="text-xs font-sans uppercase tracking-[0.4em] font-bold text-emerald-900 mb-4 italic">Project Inquiry</h2>
-                <h3 class="text-3xl font-light tracking-tight">Tell us about your mission.</h3>
-            </div>
-            
-            <form class="grid grid-cols-1 gap-8 font-sans">
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Organization Name</label>
-                    <input type="text" class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition">
-                </div>
-                <div class="space-y-4">
-                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Current Stage</label>
-                    <div class="flex flex-wrap gap-4">
-                        <label class="flex items-center space-x-2 text-sm cursor-pointer"><input type="radio" name="stage" class="accent-emerald-900"> <span>Pre-Seed / Seed</span></label>
-                        <label class="flex items-center space-x-2 text-sm cursor-pointer"><input type="radio" name="stage" class="accent-emerald-900"> <span>Series A+</span></label>
-                        <label class="flex items-center space-x-2 text-sm cursor-pointer"><input type="radio" name="stage" class="accent-emerald-900"> <span>Nonprofit / NGO</span></label>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">The Climate Challenge</label>
-                    <textarea rows="3" placeholder="Describe the environmental problem." class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition placeholder:text-black/30 text-sm"></textarea>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Scope of Interest</label>
-                    <select class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition appearance-none text-sm">
-                        <option>Strategic Definition & Discovery</option>
-                        <option>Full Lifecycle Design (UX/UI)</option>
-                        <option>Fractional Product Leadership</option>
-                        <option>End-to-End Execution (Design + PM + Eng)</option>
-                    </select>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
-                    <button type="submit" class="w-full bg-slate-900 text-white py-6 text-[11px] font-bold uppercase tracking-widest hover:bg-emerald-950 transition">
-                        Submit Inquiry
-                    </button>
-                    <p class="mt-4 text-[9px] opacity-40 uppercase tracking-[0.3em] text-center content-center">Direct response within 48 hours</p>
-                </div>
-            </form>
+    <div class="bg-[#F1F1ED] w-full max-w-2xl max-h-[90vh] overflow-y-auto relative shadow-2xl p-8 md:p-12">
+        <button onclick="toggleModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        
+        <div class="mb-12">
+            <h2 class="text-xs font-sans uppercase tracking-[0.4em] font-bold text-emerald-900 mb-4 italic">Project Inquiry</h2>
+            <h3 class="text-3xl font-light tracking-tight">Tell us about your mission.</h3>
         </div>
+
+        <form action="https://formspree.io/f/mkovvlrj" method="POST" class="grid grid-cols-1 gap-8 font-sans">
+            
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="space-y-2">
+                <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Organization Name</label>
+                <input type="text" name="organization" required class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition">
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">Email Address</label>
+                <input type="email" name="email" required class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition">
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] font-bold uppercase tracking-widest opacity-50">The Climate Challenge</label>
+                <textarea name="message" rows="3" required placeholder="Briefly describe your product or engineering hurdles..." class="w-full bg-transparent border-b border-black/20 py-3 focus:outline-none focus:border-emerald-800 transition text-sm"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-slate-900 text-white py-6 text-[11px] font-bold uppercase tracking-widest hover:bg-emerald-950 transition shadow-lg">
+                Submit Inquiry
+            </button>
+        </form>
     </div>
+</div>
 
     <script>
         function toggleModal() {
